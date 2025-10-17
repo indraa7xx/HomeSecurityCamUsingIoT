@@ -1,0 +1,13 @@
+//1)you might get problem after uploading the code 
+//it might be the issue related to baud rate in your arduino ide 
+
+  WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); 
+  Serial.begin(115200);
+  delay(1000);
+
+//click Ctrl + Shift + M to check the serial monitor in IDE and change the baud rate to 115200, if it still does not work try changing the serial.begin rate in your code to 7220 it might work.
+
+//2) after youve uploaded the code from ftdi to esp32, remove the arduino cable 
+//connect the esp32 to the external power source and click the "Reset" button to turn the esp32 on again 
+
+//3)esp32 works on 3ghz wifi frequency, if your wifi is 5ghz try using your mobile hotstop.
